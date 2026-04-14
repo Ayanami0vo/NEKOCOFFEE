@@ -13,7 +13,7 @@
     position: relative;
     width: 100%;
     height: 600px; /* 设置合适的高度 */
-    background-image: url('resource/background.jpg');
+    background-image: url('https://gitee.com/HuxleyChina/picture/raw/master/test.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
