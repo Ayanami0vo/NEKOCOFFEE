@@ -1,32 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.welcome_txt {
-    text-align: center;
-}
-
+/* 上一世我没有好好学css 这一世我将惩罚自己每一行都要写注释TaT */
+/* Copyright (c) 2026 NekoHouse. All rights reserved. */
+/* NekoHouse Official Website By Yuri1ing */
 
 .top_part {
-    position: relative;
-    width: 100%;
-    height: 600px; /* 设置合适的高度 */
-    background-image: url('resource/welcome.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative; /* 设置相对定位 给子元素当参考点 */
+  width: 100%; /* 占满整个屏幕 */
+  height: 60vh; /* 设置合适的高度 */
+  background-image: url("resource/welcome.jpg"); /* 导入图片 */
+  background-size: cover; /* 图片占满整个容器 保持比例 */
+  background-position: center; /* 图片居中显示 */
+  background-repeat: no-repeat; /* 图片不重复 */
+  display: flex; /* 使用 Flexbox 布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
 }
 
 .welcome_txt {
-    color: white; /* 根据图片颜色调整文字颜色 */
-    text-align: center;
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影增强可读性 */
-    z-index: 2;
-    padding: 20px;
+  color: white; /* 根据图片颜色调整文字颜色 */
+  text-align: center; /* 文字居中 */
+  font-size: 3rem; /* 3倍字体大小 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 阴影偏移-模糊程度-颜色半透明灰色 */
+  z-index: 2; /* 类似于图层（?）*/
+  padding: 20px; /* 内边距 使得文字周围留一圈空白 */
+}
+
+/* 
+flex是弹性盒子 便于管理 并且可以让卡片在不同尺寸屏幕下自动调整布局 默认横排 需要使用flex-warp来换行
+block是块状盒子 元素独占一行 居中麻烦 并且自动换行
+flexbox三剑客:
+    dispaly: flex;
+    justify-content 水平对齐
+    align-items 垂直对齐
+*/
+
+.card_container {
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  gap: 20px; /* 卡片之间的间距 */
+  width: 100%; /* 占满整个容器 */
+  margin: 40px auto; /* 上下外边距40px 左右自动居中 */
+  flex-wrap: wrap; /* 允许换行 当屏幕宽度不足时卡片会自动换行 */
 }
