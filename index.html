@@ -14,14 +14,25 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />
     <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <link rel="icon" href="resource/logo.jpg" type="image/png" />
   </head>
 
   <body>
-    <mdui-card class="top_part">
+    <!-- top bar -->
+    <mdui-top-app-bar
+      scroll-behavior="elevate"
+      style="position: sticky; top: 0; z-index: 100"
+    >
+      <mdui-button-icon icon="menu"></mdui-button-icon>
+      <div style="flex-grow: 1"></div>
+      <mdui-button-icon icon="search"></mdui-button-icon>
+    </mdui-top-app-bar>
+    <!-- 欢迎图片 -->
+    <div class="welcome_pic">
       <h1 class="welcome_txt">欢迎来到猫条室<br />NekoHouse</h1>
-    </mdui-card>
-
-    <div style="" class="card_container">
+    </div>
+    <!-- 卡片正文 -->
+    <div class="card_container">
       <mdui-card clickable>
         <img
           src="resource/group.jpg"

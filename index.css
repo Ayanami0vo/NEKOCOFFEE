@@ -2,7 +2,16 @@
 /* Copyright (c) 2026 NekoHouse. All rights reserved. */
 /* NekoHouse Official Website By Yuri1ing */
 
-.top_part {
+* {
+  box-sizing: border-box; /* 确保 padding 不会撑开容器宽度 */
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* 防止水平滚动条 */
+}
+
+.welcome_pic {
   position: relative; /* 设置相对定位 给子元素当参考点 */
   width: 100%; /* 占满整个屏幕 */
   height: 60vh; /* 设置合适的高度 */
@@ -13,6 +22,7 @@
   display: flex; /* 使用 Flexbox 布局 */
   align-items: center; /* 垂直居中 */
   justify-content: center; /* 水平居中 */
+  padding: 10px; /* 内边距 使得卡片周围留一圈空白 */
 }
 
 .welcome_txt {
@@ -41,4 +51,5 @@ flexbox三剑客:
   width: 100%; /* 占满整个容器 */
   margin: 40px auto; /* 上下外边距40px 左右自动居中 */
   flex-wrap: wrap; /* 允许换行 当屏幕宽度不足时卡片会自动换行 */
+  padding: 10px; /* 内边距 使得卡片周围留一圈空白 */
 }
